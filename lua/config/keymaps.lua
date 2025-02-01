@@ -1,6 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+-- save document
+keymap.set({ "n" }, "<Leader>w", "<cmd>w<cr><esc>", { desc = "Save File" })
 
+-- quit
+keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
